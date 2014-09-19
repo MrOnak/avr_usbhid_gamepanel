@@ -46,7 +46,7 @@ See the gamekeys.h file for the pin configuration for the shift registers.
 In gamekeys.h you will also find the array `keyCodes` which holds the
 mapping of buttons to USB keycodes. 
 
-The `buttonCodes` array ordered such that `keyCodes[0]` will be mapped to the
+The `keyCodes` array ordered such that `keyCodes[0]` will be mapped to the
 bit that is shifted in first. 
 
 For a list of available USB keycodes, see usbkeycodes.h. Note that the list
