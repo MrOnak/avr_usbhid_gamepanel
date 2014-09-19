@@ -64,7 +64,7 @@ to modify to your own needs.
 
 One word of advise though: If not all six analogue axis are used, I'd strongly
 recommend to either remove code for any axis / any input you're not using 
-from the switch-statement in the interrupt routine ISR(ADC_vect) or routing
+from the switch-statement in the interrupt routine `ISR(ADC_vect)` or routing
 the ADC input pin to ground. I've had extreme floating inputs of axis when 
 not all six are connected.
 
@@ -75,9 +75,10 @@ PD2 and PD3, you will have to change the values for `USB_CFG_IOPORTNAME`,
 subdirectory.
 
 Make sure you change the values in the Makefile for the microcontroller in 
-use, your programmer and the frequency that your uC runs at. Make sure you 
-double check with the VUSB website at http://www.obdev.at/avrusb/ which clock 
-rates are supported (12.000MHz and 16.000MHz are fine, but there are others).
+use, your programmer and the frequency that your microcontroller runs at. Make 
+sure you double check with the VUSB website at http://www.obdev.at/avrusb/ 
+which clock rates are supported (12.000MHz and 16.000MHz are fine, but there 
+are others).
 
 ## A WORD ON THE EAGLE FILE 
 The eagle file was made for clarification purposes. I did NOT build my own
