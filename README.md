@@ -16,7 +16,7 @@ modifiers as I'm not using them (yet) but that is a fairly easy exercise to do.
 The code is based on the USB HID keyboard tutorial by Joonas Pihlajamaa, 
 published at the Code and Life blog, http://codeandlife.com
 
-The usbdrv subfolder contain parts of V-USB library available at 
+The usbdrv subfolder contains parts of the V-USB library available at 
 http://www.obdev.at/avrusb/ and its contents are copyrighted by their 
 respective authors. 
 
