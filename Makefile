@@ -2,6 +2,7 @@
 CC = avr-gcc
 OBJCOPY = avr-objcopy
 DUDE = avrdude
+SIZE = avr-size
 
 # If you are not using ATtiny85 and the USBtiny programmer, 
 # update the lines below to match your configuration
@@ -29,6 +30,10 @@ clean:
 # From .elf file to .hex
 %.hex: %.elf
 	$(OBJCOPY) $(OBJFLAGS) $< $@
+
+# outputs the size requirements on the microcontroller
+size: main.hex
+	$(SIZE) main.hex
 
 # Main.elf requires additional objects to the firmware, not just main.o
 main.elf: $(OBJECTS)
