@@ -116,4 +116,3 @@ that your device supports.
 A bit of logic was implemented to keep the number of USB messages down to
 a minimum. The device will send an USB message only when a button is pressed
 or released, not when buttons are held down.
-
