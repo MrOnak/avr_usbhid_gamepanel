@@ -17231,6 +17231,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="P+10" library="supply1" deviceset="VCC" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" deviceset="VCC" device=""/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -17837,11 +17838,11 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="P+6" gate="VCC" x="294.64" y="147.32" smashed="yes" rot="R90">
 <attribute name="VALUE" x="294.64" y="144.78" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="P+7" gate="VCC" x="322.58" y="88.9" smashed="yes">
-<attribute name="VALUE" x="325.12" y="91.44" size="1.778" layer="96" rot="R180"/>
+<instance part="P+7" gate="VCC" x="345.44" y="88.9" smashed="yes">
+<attribute name="VALUE" x="347.98" y="91.44" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND9" gate="1" x="322.58" y="73.66" smashed="yes">
-<attribute name="VALUE" x="320.04" y="71.12" size="1.778" layer="96"/>
+<instance part="GND9" gate="1" x="345.44" y="73.66" smashed="yes">
+<attribute name="VALUE" x="342.9" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="JRZ" gate="A" x="350.52" y="243.84" rot="R90"/>
 <instance part="JRY" gate="A" x="350.52" y="233.68" rot="R90"/>
@@ -17879,6 +17880,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="P+11" gate="VCC" x="10.16" y="215.9" smashed="yes" rot="R180">
 <attribute name="VALUE" x="7.62" y="213.36" size="1.778" layer="96"/>
+</instance>
+<instance part="GND13" gate="1" x="302.26" y="114.3" smashed="yes">
+<attribute name="VALUE" x="299.72" y="111.76" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -18191,12 +18195,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="360.68" y="63.5"/>
 </segment>
 <segment>
-<pinref part="ISP" gate="A" pin="1"/>
-<wire x1="330.2" y1="83.82" x2="322.58" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="P+7" gate="VCC" pin="VCC"/>
-<wire x1="322.58" y1="86.36" x2="322.58" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JX" gate="A" pin="2"/>
 <pinref part="JY" gate="A" pin="2"/>
 <wire x1="350.52" y1="190.5" x2="350.52" y2="200.66" width="0.1524" layer="91"/>
@@ -18254,6 +18252,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="IC10" gate="P" pin="VCC"/>
 <wire x1="10.16" y1="241.3" x2="10.16" y2="248.92" width="0.1524" layer="91"/>
 <junction x="10.16" y="241.3"/>
+</segment>
+<segment>
+<pinref part="ISP" gate="A" pin="2"/>
+<wire x1="337.82" y1="83.82" x2="345.44" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="P+7" gate="VCC" pin="VCC"/>
+<wire x1="345.44" y1="83.82" x2="345.44" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -18615,12 +18619,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="360.68" y="53.34"/>
 </segment>
 <segment>
-<pinref part="ISP" gate="A" pin="5"/>
-<wire x1="330.2" y1="78.74" x2="322.58" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="322.58" y1="76.2" x2="322.58" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JRZ" gate="A" pin="3"/>
 <pinref part="JRY" gate="A" pin="3"/>
 <wire x1="353.06" y1="241.3" x2="353.06" y2="231.14" width="0.1524" layer="91"/>
@@ -18673,6 +18671,25 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="IC10" gate="P" pin="GND"/>
 <wire x1="25.4" y1="241.3" x2="25.4" y2="248.92" width="0.1524" layer="91"/>
 <junction x="25.4" y="241.3"/>
+</segment>
+<segment>
+<pinref part="IC11" gate="1" pin="AGND"/>
+<pinref part="C37" gate="G$1" pin="2"/>
+<wire x1="304.8" y1="124.46" x2="302.26" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="124.46" x2="302.26" y2="127" width="0.1524" layer="91"/>
+<pinref part="IC11" gate="1" pin="GND@1"/>
+<wire x1="304.8" y1="119.38" x2="302.26" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="119.38" x2="302.26" y2="124.46" width="0.1524" layer="91"/>
+<junction x="302.26" y="124.46"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="302.26" y1="116.84" x2="302.26" y2="119.38" width="0.1524" layer="91"/>
+<junction x="302.26" y="119.38"/>
+</segment>
+<segment>
+<pinref part="ISP" gate="A" pin="6"/>
+<wire x1="337.82" y1="78.74" x2="345.44" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="345.44" y1="78.74" x2="345.44" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -19576,18 +19593,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="EXTEND" gate="A" pin="3"/>
 </segment>
 </net>
-<net name="N$113" class="0">
-<segment>
-<pinref part="IC11" gate="1" pin="AGND"/>
-<pinref part="C37" gate="G$1" pin="2"/>
-<wire x1="304.8" y1="124.46" x2="302.26" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="302.26" y1="124.46" x2="302.26" y2="127" width="0.1524" layer="91"/>
-<pinref part="IC11" gate="1" pin="GND@1"/>
-<wire x1="304.8" y1="119.38" x2="302.26" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="302.26" y1="119.38" x2="302.26" y2="124.46" width="0.1524" layer="91"/>
-<junction x="302.26" y="124.46"/>
-</segment>
-</net>
 <net name="N$116" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
@@ -19752,11 +19757,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="IC11" gate="1" pin="PB3(MOSI/OC2A/PCINT3)"/>
-<wire x1="365.76" y1="121.92" x2="373.38" y2="121.92" width="0.1524" layer="91"/>
-<label x="375.92" y="121.92" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC7" gate="A" pin="SH/!LD"/>
 <wire x1="96.52" y1="228.6" x2="96.52" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="218.44" x2="142.24" y2="218.44" width="0.1524" layer="91"/>
@@ -19778,41 +19778,17 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="EXTEND" gate="A" pin="1"/>
 </segment>
 <segment>
-<pinref part="ISP" gate="A" pin="3"/>
-<wire x1="330.2" y1="81.28" x2="322.58" y2="81.28" width="0.1524" layer="91"/>
-<label x="314.96" y="81.28" size="1.778" layer="95"/>
+<pinref part="IC11" gate="1" pin="PB3(MOSI/OC2A/PCINT3)"/>
+<wire x1="365.76" y1="121.92" x2="373.38" y2="121.92" width="0.1524" layer="91"/>
+<label x="375.92" y="121.92" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="MISO" class="0">
-<segment>
-<pinref part="ISP" gate="A" pin="2"/>
-<wire x1="337.82" y1="83.82" x2="345.44" y2="83.82" width="0.1524" layer="91"/>
-<label x="347.98" y="83.82" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC11" gate="1" pin="PB4(MISO/PCINT4)"/>
-<wire x1="365.76" y1="119.38" x2="373.38" y2="119.38" width="0.1524" layer="91"/>
-<label x="375.92" y="119.38" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCK" class="0">
 <segment>
 <pinref part="ISP" gate="A" pin="4"/>
 <wire x1="337.82" y1="81.28" x2="345.44" y2="81.28" width="0.1524" layer="91"/>
 <label x="347.98" y="81.28" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="IC11" gate="1" pin="PB5(SCK/PCINT5)"/>
-<wire x1="365.76" y1="116.84" x2="373.38" y2="116.84" width="0.1524" layer="91"/>
-<label x="375.92" y="116.84" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="RST" class="0">
-<segment>
-<pinref part="ISP" gate="A" pin="6"/>
-<wire x1="337.82" y1="78.74" x2="345.44" y2="78.74" width="0.1524" layer="91"/>
-<label x="347.98" y="78.74" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="RST1" gate="1" pin="S1"/>
 <wire x1="297.18" y1="182.88" x2="302.26" y2="182.88" width="0.1524" layer="91"/>
@@ -19830,6 +19806,11 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="302.26" y="175.26"/>
 <pinref part="R73" gate="G$1" pin="2"/>
 <wire x1="302.26" y1="182.88" x2="304.8" y2="182.88" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="ISP" gate="A" pin="5"/>
+<wire x1="330.2" y1="78.74" x2="322.58" y2="78.74" width="0.1524" layer="91"/>
+<label x="314.96" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="J_AX_X" class="0">
@@ -19902,6 +19883,30 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="JRZ" gate="A" pin="1"/>
 <wire x1="347.98" y1="241.3" x2="337.82" y2="241.3" width="0.1524" layer="91"/>
 <label x="325.12" y="241.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="MISO" class="0">
+<segment>
+<pinref part="IC11" gate="1" pin="PB4(MISO/PCINT4)"/>
+<wire x1="365.76" y1="119.38" x2="373.38" y2="119.38" width="0.1524" layer="91"/>
+<label x="375.92" y="119.38" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ISP" gate="A" pin="1"/>
+<wire x1="330.2" y1="83.82" x2="322.58" y2="83.82" width="0.1524" layer="91"/>
+<label x="314.96" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SCK" class="0">
+<segment>
+<pinref part="IC11" gate="1" pin="PB5(SCK/PCINT5)"/>
+<wire x1="365.76" y1="116.84" x2="373.38" y2="116.84" width="0.1524" layer="91"/>
+<label x="375.92" y="116.84" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ISP" gate="A" pin="3"/>
+<wire x1="330.2" y1="81.28" x2="322.58" y2="81.28" width="0.1524" layer="91"/>
+<label x="314.96" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
